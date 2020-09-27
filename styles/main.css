@@ -1,0 +1,12 @@
+.criminalsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 4rem;
+}
+.col {
+    border-color: rgb(156, 152, 152);
+    border-style: dotted;
+    text-indent: 10px;
+
+}
