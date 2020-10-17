@@ -8,5 +8,5 @@ import { CriminalList } from './criminals/CriminalList.js'
 useOfficers()
 getOfficers()
 
-getCriminals()
+// getCriminals()
 CriminalList()
