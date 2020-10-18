@@ -7,14 +7,8 @@ export const useOfficers = () => {
 
 export const getOfficers = () => {
     return fetch("https://criminals.glassdale.us/officers")
-        .then(
-            response => {
-                console.log(response)
-                return response.json()
-            })
-        .then(
-            parsedOfficers => {
-                console.log(parsedOfficers)
+        .then(response => response.json())
+        .then(parsedOfficers => {
                 officers = parsedOfficers
             }
         )

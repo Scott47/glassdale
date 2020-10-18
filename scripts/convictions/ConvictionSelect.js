@@ -18,6 +18,7 @@ eventHub.addEventListener("change", event => {
 
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "crimeSelect") {
+        console.log(event.target.value)
         // Create custom event. Provide an appropriate name.
         const customEvent = new CustomEvent("crimeChosen", {
             detail: {
@@ -42,7 +43,7 @@ const render = convictionsCollection => {
             ${
                 convictionsCollection.map(convictObject => {
                     const conviction = convictObject.name
-                    return `<option value="${conviction.id}">${conviction}</option>`
+                    return `<option value="${conviction}">${conviction}</option>`
                 })
             }
         </select>
