@@ -5,6 +5,15 @@ import { Criminal } from "./Criminal.js";
 const criminalContainer = document.querySelector(".criminalsContainer");
 const eventHub = document.querySelector(".container");
 
+
+// Render ALL criminals initally
+export const CriminalList = () => {
+  getCriminals().then(() => {
+    const appStateCriminals = useCriminals();
+    render(appStateCriminals);
+  });
+};
+
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener("crimeChosen", (event) => {
   console.log(event);
@@ -26,15 +35,7 @@ eventHub.addEventListener("crimeChosen", (event) => {
         render(matchingCriminals);
   }
 });
-eventHub.addEventListener("officerSelected", event => {
-  const officerName = event.detail.officer
-  const criminals  = useCriminals()
-  const matchingOfficers = criminals
-    .filter((currentCriminal) => {
-    return currentCriminal.arrestingOfficer === officerName
-  })
-  render(matchingOfficers)
-})
+
 
 const render = criminalCollection => {
     // console.log(criminalCollection)
@@ -44,13 +45,31 @@ const render = criminalCollection => {
     })
 };
 
-// Render ALL criminals initally
-export const CriminalList = () => {
-  getCriminals().then(() => {
-    const appStateCriminals = useCriminals();
-    render(appStateCriminals);
-  });
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+eventHub.addEventListener("officerSelected", event => {
+  const officerName = event.detail.officer
+  const criminals  = useCriminals()
+  const matchingOfficers = criminals
+    .filter((currentCriminal) => {
+    return currentCriminal.arrestingOfficer === officerName
+  })
+  render(matchingOfficers)
+})
 
 // export const CriminalList = () => {
 //     getCriminals().then(() => {

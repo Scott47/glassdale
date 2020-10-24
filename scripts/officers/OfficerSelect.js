@@ -1,10 +1,8 @@
 /*
  *   OfficerSelect component that renders a select HTML element
- *   which lists all officers in the Glassdale PD API
+ *   which lists officers in the Glassdale PD API
  */
 import { getOfficers, useOfficers } from "./OfficerProvider.js"
-// import { useCriminals } from "../criminals/CriminalProvider.js"
-
 /*
     Which element in your HTML contains all components?
     That's your Event Hub. Get a reference to it here.

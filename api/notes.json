@@ -1,0 +1,22 @@
+{
+  "notes": [
+    {
+      "title": "NOTE TITLE",
+      "author": "person",
+      "date": "2020-10-18",
+      "id": 1
+    },
+    {
+      "title": "Newest Note",
+      "author": "Peolon",
+      "date": "2020-10-23",
+      "id": 2
+    },
+    {
+      "title": "lkjhlkjhlkjh",
+      "author": "kj;lkjoiuoiu",
+      "date": "2020-10-23",
+      "id": 3
+    }
+  ]
+}
