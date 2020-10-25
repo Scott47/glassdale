@@ -4,6 +4,13 @@
     grid-auto-rows: auto;
     grid-gap: 4rem;
 }
+
+.noteListContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4rem;
+    justify-content: end;
+}
+
 .col {
     border-color: rgb(156, 152, 152);
     border-style: dotted;

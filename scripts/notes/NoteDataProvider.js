@@ -7,7 +7,9 @@ const dispatchStateChangeEvent = () => {
 }
 let notes = []
 
-export const useNotes = () => [...notes]
+export const useNotes = () => {
+    return notes.slice()
+}
 
 export const getNotes = () => {
     return fetch('http://localhost:8088/notes')

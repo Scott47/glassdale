@@ -3,7 +3,6 @@ import { Note } from "./Note.js"
 
 
 const contentTarget = document.querySelector('.noteListContainer')
-// const eventHub = document.querySelector('.container')
 
 export const NoteList = () => {
     getNotes().then(() => {
