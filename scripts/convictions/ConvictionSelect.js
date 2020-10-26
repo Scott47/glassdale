@@ -15,7 +15,6 @@ const contentTarget = document.querySelector(".filters__crime")
 
 // On the event hub, listen for a "change" event.
 eventHub.addEventListener("change", event => {
-
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "crimeSelect") {
         console.log(event.target.value)
@@ -56,4 +55,3 @@ export const ConvictionSelect = () => {
     render(convictions)
     })
 }
-

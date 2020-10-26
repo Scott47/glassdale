@@ -5,6 +5,7 @@ const dispatchStateChangeEvent = () => {
 
     eventHub.dispatchEvent(noteStateChangedEvent)
 }
+
 let notes = []
 
 export const useNotes = () => {
