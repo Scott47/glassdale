@@ -1,6 +1,4 @@
 
-
-
 export const Officer = (officerObject) => {
     return `
     <section class="officer__card">

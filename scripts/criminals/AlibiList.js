@@ -1,20 +1,16 @@
 // renders list of alibis for the selected criminal.
-
 import {  useCriminals } from "./CriminalProvider.js"
-
 
 const eventHub = document.querySelector('.container')
 
 export const alibiListener = () => {
     eventHub.addEventListener('alibiButtonClicked', (eventObj) => {
         const foundCriminal = useCriminals().find(criminalObj => criminalObj.id === eventObj.detail.criminalId)
-        // const alibisForFoundCriminal = foundCriminal.known_associates
         render(foundCriminal)
     })
 }
-// fucnction that adds alibis to the criminal card
 
-
+// function that adds alibis to the criminal card
 const render = (alibiCollection) => {
     const contentTarget = document.querySelector(`#associates--${alibiCollection.id}`)
 

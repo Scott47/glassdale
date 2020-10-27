@@ -20,7 +20,6 @@ eventHub.addEventListener("click", clickEvent => {
             date: noteDate.value,
             noteContent: noteContent.value,
         }
-
         // Change API state and application state
         saveNote(newNote)
     }
@@ -36,7 +35,6 @@ const render = () => {
     <button id="saveNote">Save Note</button>
     `
 }
-
 
 export const NoteForm = () => {
     render()

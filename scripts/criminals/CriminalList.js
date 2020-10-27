@@ -17,15 +17,10 @@ eventHub.addEventListener("crimeChosen", (event) => {
   console.log(event);
 // Use the property you added to the event detail.
   if (event.detail.crimeThatWasChosen !== "0") {
-/*
-    Filter the criminals application state down to the people that committed the crime
-*/
+// Filter the criminals application state down to the people that committed the crime
   const appStateCriminals = useCriminals();
   const matchingCriminals = appStateCriminals.filter((currentCriminal) => currentCriminal.conviction === event.detail.crimeThatWasChosen);
-/*
-  Then invoke render() and pass the filtered collection as
-  an argument
-*/
+//invoke render and pass the filtered collection of criminals as an argument
     render(matchingCriminals);
   } else {
     CriminalList();

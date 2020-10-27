@@ -3,10 +3,7 @@
  *   which lists officers in the Glassdale PD API
  */
 import { getOfficers, useOfficers } from "./OfficerProvider.js"
-/*
-    Which element in your HTML contains all components?
-    That's your Event Hub. Get a reference to it here.
-*/
+//Get reference to main container, eventHub
 const eventHub = document.querySelector(".container")
 
 // Get a reference to the DOM element where the <select> will be rendered
@@ -24,7 +21,6 @@ eventHub.addEventListener("change", changeEvent => {
                 officer: selectOfficer
             }
         })
-        console.log(customEvent)
         // Dispatch to event hub
         eventHub.dispatchEvent(customEvent)
     }
@@ -32,9 +28,8 @@ eventHub.addEventListener("change", changeEvent => {
 
 const render = officersCollection => {
     /*
-        Use interpolation here to invoke the map() method on
+        Use interpolation to invoke the map() method on
         the convictionsCollection to generate the option elements.
-        Look back at the example provided above.
     */
     contentTarget.innerHTML = `
         <select class="dropdown" id="officerSelect">
