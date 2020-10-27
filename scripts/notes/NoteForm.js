@@ -1,4 +1,5 @@
 import { saveNote } from "./NoteDataProvider.js"
+import { NoteList } from "./NoteList.js"
 
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
@@ -19,10 +20,10 @@ eventHub.addEventListener("click", clickEvent => {
             date: noteDate.value,
             noteContent: noteContent.value,
         }
-
         // Change API state and application state
         saveNote(newNote)
     }
+    NoteList()
 })
 
 const render = () => {
@@ -30,11 +31,10 @@ const render = () => {
     <input type="text" id="note-title" name="note" placeholder="Enter note title"/>
     <input type="text" id="note-author" name="date" placeholder="Your name here..."/>
     <input type="date" id="note-timestamp" name="date" />
-    <text area id="note-content" placeholder="Note text here" name="crime"></text>
+    <textarea id="note-content" placeholder="Note text here" name="crime"></textarea>
     <button id="saveNote">Save Note</button>
     `
 }
-
 
 export const NoteForm = () => {
     render()

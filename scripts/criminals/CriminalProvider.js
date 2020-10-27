@@ -7,7 +7,7 @@ export const useCriminals = () => {
 }
 
 export const getCriminals = () => {
-    return fetch("https://criminals.glassdale.us/criminals")
+    return fetch("https://criminals.glassdale.us/criminals?_sort=date&_order=desc")
 
         .then(response => response.json())
         .then(

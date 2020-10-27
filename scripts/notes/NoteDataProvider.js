@@ -5,9 +5,12 @@ const dispatchStateChangeEvent = () => {
 
     eventHub.dispatchEvent(noteStateChangedEvent)
 }
+
 let notes = []
 
-export const useNotes = () => [...notes]
+export const useNotes = () => {
+    return notes.slice()
+}
 
 export const getNotes = () => {
     return fetch('http://localhost:8088/notes')
@@ -15,7 +18,6 @@ export const getNotes = () => {
         .then(parsedNotes => {
             notes = parsedNotes
         })
-
 }
 
 export const saveNote = note => {

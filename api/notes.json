@@ -1,22 +1,25 @@
 {
   "notes": [
     {
-      "title": "NOTE TITLE",
-      "author": "person",
-      "date": "2020-10-18",
-      "id": 1
+      "title": "Emily's case",
+      "author": "Sgt. Scott",
+      "date": "2020-10-23",
+      "noteContent": "Emily's gas is criminal. The end.",
+      "id": 5
     },
     {
-      "title": "Newest Note",
-      "author": "Peolon",
-      "date": "2020-10-23",
-      "id": 2
+      "title": "Scooby",
+      "author": "Dooby",
+      "date": "2020-10-22",
+      "noteContent": "saadfadfadadfafdsa",
+      "id": 6
     },
     {
-      "title": "lkjhlkjhlkjh",
-      "author": "kj;lkjoiuoiu",
-      "date": "2020-10-23",
-      "id": 3
+      "title": "Hello",
+      "author": "Goodbye",
+      "date": "2020-10-21",
+      "noteContent": "Sianara",
+      "id": 7
     }
   ]
 }

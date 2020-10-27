@@ -1,3 +1,6 @@
+// convert object to HTML string
+// return that HTML String
+
 export const Note = (noteObj) => {
     return `
     <section class="one__note">

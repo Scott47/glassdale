@@ -3,19 +3,21 @@
  *   which lists all convictions in the Glassdale PD API
  */
 import { useConvictions, getConvictions } from "./ConvictionProvider.js"
-
-/*
-    Which element in your HTML contains all components?
-    That's your Event Hub. Get a reference to it here.
-*/
+// Reference to main container, eventHub.
 const eventHub = document.querySelector(".container")
-
-// Get a reference to the DOM element where the <select> will be rendered
+// Reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters__crime")
 
-// On the event hub, listen for a "change" event.
-eventHub.addEventListener("change", event => {
+export const ConvictionSelect = () => {
+    // Get all convictions from application state
+    getConvictions().then(() => {
+    const convictions = useConvictions()
+    render(convictions)
+    })
+}
 
+// On the eventHub, listen for a "change" event.
+eventHub.addEventListener("change", event => {
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "crimeSelect") {
         console.log(event.target.value)
@@ -25,7 +27,6 @@ eventHub.addEventListener("change", event => {
                 crimeThatWasChosen: event.target.value
             }
         })
-        console.log(customEvent)
         // Dispatch to event hub
         eventHub.dispatchEvent(customEvent)
     }
@@ -49,12 +50,3 @@ const render = convictionsCollection => {
         </select>
     `
 }
-
-export const ConvictionSelect = () => {
-    // Get all convictions from application state
-    getConvictions().then(() => {
-    const convictions = useConvictions()
-    render(convictions)
-    })
-}
-
