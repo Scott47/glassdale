@@ -4,7 +4,8 @@ import { OfficerSelect } from './officers/OfficerSelect.js'
 import { getConvictions } from './convictions/ConvictionProvider.js'
 import { NoteForm } from './notes/NoteForm.js'
 import { NoteList } from './notes/NoteList.js'
-import { alibiListener } from './criminals/AlibiList.js'
+import './criminals/AlibiList.js'
+import './witnesses/WitnessList.js'
 
 
 getConvictions().then(ConvictionSelect())
@@ -13,4 +14,3 @@ OfficerSelect()
 CriminalList()
 NoteForm()
 NoteList()
-alibiListener ()
