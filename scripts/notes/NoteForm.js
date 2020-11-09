@@ -9,26 +9,31 @@ const eventHub = document.querySelector(".container")
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
-        const noteTitle = document.querySelector("#note-title")
-        const noteAuthor = document.querySelector("#note-author")
-        const noteDate = document.querySelector("#note-timestamp")
-        const noteContent = document.querySelector("#note-content")
-        const criminalId = parseInt(document.querySelector("#note--criminal").value)
-        const timestamp = Date.now()
+        let noteTitle = document.querySelector("#note-title")
+        let noteAuthor = document.querySelector("#note-author")
+        let noteDate = document.querySelector("#note-timestamp")
+        let noteContent = document.querySelector("#note-content")
+        let criminalId = document.querySelector("#note--criminal")
+        let timestamp = Date.now()
 
         // Make a new object representation of a note
         const newNote = {
             title: noteTitle.value,
             author: noteAuthor.value,
             date: noteDate.value,
-            criminalId: criminalId,
+            criminalId: +criminalId.value,
             noteContent: noteContent.value,
             timestamp: timestamp
         }
         // Change API state and application state
         saveNote(newNote)
+        noteTitle.value = ''
+        noteAuthor.value = ''
+        noteDate.value = ''
+        noteContent.value  = ''
+        criminalId.value = 0
+        NoteList()
     }
-    NoteList()
 })
 
 const render = (arrayOfCriminals) => {

@@ -7,6 +7,8 @@ export const Note = (noteObj, criminalObj) => {
         <p>Author: ${noteObj.author}</p>
         <p>Suspect: ${criminalObj.name}</p>
         <p>Time Note Entered: ${new Date(noteObj.date).toLocaleDateString('en-US')}</p>
+        <p>Note: ${noteObj.note}</p>
+        <button id="deleteNote--${noteObj.id}">Delete</button>
     </section>
     `
 }
