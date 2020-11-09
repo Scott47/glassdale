@@ -20,7 +20,6 @@ eventHub.addEventListener("click", (eventObj) => {
     // check to see if the button was clicked is the correct button
     const [prefix, criminalId] = eventObj.target.id.split('--')
     if (eventObj.target.id.startsWith('associates') ) {
-
         const myCustomEvent = new CustomEvent('alibiButtonClicked', {
                 detail: {
                     criminalId: +criminalId
